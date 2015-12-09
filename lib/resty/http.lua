@@ -806,6 +806,7 @@ function _M.proxy_response(self, response, chunksize)
 
         if chunk then
             ngx.print(chunk)
+            ngx.flush(true)
         end
     until not chunk
 end
