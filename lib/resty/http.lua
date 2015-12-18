@@ -813,7 +813,8 @@ function _M.proxy_response(self, response, chunksize)
             res, err = ngx.flush(true)
             if not res then
                 ngx_log(ngx_ERR, err)
-                break
+                -- Comment break because of the HTTP 1.0 buffering error
+                -- break
             end
         end
     until not chunk
