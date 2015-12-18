@@ -37,7 +37,7 @@ local HOP_BY_HOP_HEADERS = {
     ["trailers"]            = true,
     ["transfer-encoding"]   = true,
     ["upgrade"]             = true,
-    ["content-length"]      = true, -- Not strictly hop-by-hop, but Nginx will deal
+    -- ["content-length"]      = true, -- Not strictly hop-by-hop, but Nginx will deal
                                     -- with this (may send chunked for example).
 }
 
